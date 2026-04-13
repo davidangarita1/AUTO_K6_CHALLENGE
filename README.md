@@ -1,0 +1,1 @@
+# Reto de Pruebas de Rendimiento con K6
