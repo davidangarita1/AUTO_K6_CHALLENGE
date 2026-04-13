@@ -1,10 +1,13 @@
 {
-  "name": "AUTO_K6_CHALLENGE",
+  "name": "auto_k6_testing",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "k6 run tests/login.js",
+    "test:login": "k6 run tests/login.js",
+    "test:login:json": "k6 run tests/login.js --summary-export=reports/results.json",
+    "test:login:csv": "k6 run tests/login.js --out csv=reports/results.csv"
   },
   "keywords": [],
   "author": "",
