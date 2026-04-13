@@ -1,0 +1,24 @@
+  █ TOTAL RESULTS 
+    checks_total.......: 10467   148.808479/s
+    checks_succeeded...: 100.00% 10467 out of 10467
+    checks_failed......: 0.00%   0 out of 10467
+    ✓ status is 2xx
+    ✓ response time < 1500ms
+    ✓ response has token
+    CUSTOM
+    failed_requests................: 0.00%  0 out of 3489
+    login_duration.................: avg=363.793235 min=294.793957 med=325.033091 max=803.467463 p(90)=493.232668 p(95)=591.84825
+    HTTP
+    http_req_duration..............: avg=363.79ms   min=294.79ms   med=325.03ms   max=803.46ms   p(90)=493.23ms   p(95)=591.84ms 
+      { expected_response:true }...: avg=363.79ms   min=294.79ms   med=325.03ms   max=803.46ms   p(90)=493.23ms   p(95)=591.84ms 
+    http_req_failed................: 0.00%  0 out of 3489
+    http_reqs......................: 3489   49.602826/s
+    EXECUTION
+    iteration_duration.............: avg=364.96ms   min=294.97ms   med=325.54ms   max=803.73ms   p(90)=493.94ms   p(95)=593.08ms 
+    iterations.....................: 3489   49.602826/s
+    vus............................: 1      min=1         max=25
+    vus_max........................: 25     min=25        max=25
+    NETWORK
+    data_received..................: 2.0 MB 28 kB/s
+    data_sent......................: 438 kB 6.2 kB/s
+/s
