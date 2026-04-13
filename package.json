@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "k6 run tests/login.js",
-    "test:login": "k6 run tests/login.js",
-    "test:login:json": "k6 run tests/login.js --summary-export=reports/results.json",
-    "test:login:csv": "k6 run tests/login.js --out csv=reports/results.csv"
+    "test:login": "k6 run tests/login.js --console-output=reports/console.log 2>&1 | tee /dev/tty | sed 's/\\x1B\\[[0-9;?]*[A-Za-z]//g' | tr '\\r' '\\n' | awk '/TOTAL RESULTS/,0' | grep -v '^running\\|^default' | sed '/^[[:space:]]*$/d' > reports/results.txt",
+    "test:login:json": "k6 run tests/login.js --console-output=reports/console.log --summary-export=reports/results.json 2>&1 | tee /dev/tty | sed 's/\\x1B\\[[0-9;?]*[A-Za-z]//g' | tr '\\r' '\\n' | awk '/TOTAL RESULTS/,0' | grep -v '^running\\|^default' | sed '/^[[:space:]]*$/d' > reports/results.txt",
+    "test:login:csv": "k6 run tests/login.js --console-output=reports/console.log --out csv=reports/results.csv 2>&1 | tee /dev/tty | sed 's/\\x1B\\[[0-9;?]*[A-Za-z]//g' | tr '\\r' '\\n' | awk '/TOTAL RESULTS/,0' | grep -v '^running\\|^default' | sed '/^[[:space:]]*$/d' > reports/results.txt"
   },
   "keywords": [],
   "author": "",
